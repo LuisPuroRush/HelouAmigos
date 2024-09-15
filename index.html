@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página con botones animados</title>
+    <title>Bienvenidos amigos :3</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto:wght@300;400;700&display=swap');
 
@@ -33,12 +33,12 @@
             display: inline-block;
             margin: 15px;
             padding: 20px;
-            width: 300px; /* Aumenté el tamaño para caber "Sígueme en Instagram" */
+            width: 300px;
             border: none;
             cursor: pointer;
             border-radius: 10px;
             color: white;
-            font-size: 20px; /* Ajusté el tamaño de la fuente */
+            font-size: 20px;
             font-weight: 600;
             transition: all 0.3s ease-in-out;
             text-align: left;
@@ -50,7 +50,7 @@
         }
 
         .btn img {
-            width: 50px; /* Aumenté el tamaño de los iconos */
+            width: 50px;
             height: 50px;
             margin-right: 15px;
             vertical-align: middle;
@@ -113,7 +113,6 @@
             }
         }
 
-        /* Generating more stars */
         .star:nth-child(2) { left: 20%; animation-duration: 12s; }
         .star:nth-child(3) { left: 40%; animation-duration: 14s; }
         .star:nth-child(4) { left: 60%; animation-duration: 16s; }
@@ -127,6 +126,48 @@
         .star:nth-child(12) { left: 55%; animation-duration: 17s; }
         .star:nth-child(13) { left: 75%; animation-duration: 19s; }
         .star:nth-child(14) { left: 85%; animation-duration: 12s; }
+
+        /* Contenedor de moderadores */
+        .moderators-container {
+            position: absolute;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            width: 200px;
+            animation: float 5s ease-in-out infinite;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .moderators-container:hover {
+            box-shadow: 0 0 25px #FFFFFF;
+        }
+
+        .moderators-container h2 {
+            font-size: 22px;
+            font-family: 'Roboto', sans-serif;
+            margin-bottom: 15px;
+            color: white;
+        }
+
+        .moderators-list {
+            text-align: left;
+            list-style: none;
+            padding: 0;
+        }
+
+        .moderators-list li {
+            font-size: 18px;
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .moderators-list li span {
+            margin-right: 10px;
+        }
     </style>
 </head>
 <body>
@@ -166,6 +207,17 @@
         <div class="star" style="left: 55%; animation-duration: 17s;"></div>
         <div class="star" style="left: 75%; animation-duration: 19s;"></div>
         <div class="star" style="left: 85%; animation-duration: 12s;"></div>
+    </div>
+
+    <!-- Contenedor de moderadores -->
+    <div class="moderators-container">
+        <h2>Moderadores</h2>
+        <ul class="moderators-list">
+            <li><span>👑</span>Valesita</li>
+            <li><span>👑</span>Andreita</li>
+            <li><span>👑</span>Lucianita</li>
+            <li><span>👑</span>Tobias</li>
+        </ul>
     </div>
 
 </body>
