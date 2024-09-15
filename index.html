@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bienvenidos amigos :3</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto:wght@300;400;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto:wght@300;400;700&family=Comic+Sans+MS&display=swap');
 
         body {
             background-color: black;
@@ -16,14 +16,39 @@
         }
 
         h1 {
-            margin-top: 50px;
-            font-size: 48px;
+            margin-top: 20px;
+            font-size: 42px;
             color: white;
             font-family: 'Great Vibes', cursive;
         }
 
+        .buttons-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: flex-start; /* Alinea hacia arriba */
+            margin-top: 10px; /* Subir los botones */
+            position: relative;
+        }
+
+        .steam-id {
+            text-align: left;
+            font-size: 16px;
+            font-family: 'Comic Sans MS', cursive;
+            margin-right: 20px;
+            display: flex;
+            align-items: center;
+            position: absolute;
+            left: 20px; /* Mantener el ID a la izquierda */
+        }
+
+        .steam-id img {
+            width: 24px;
+            height: 24px;
+            margin-right: 8px;
+        }
+
         .buttons {
-            margin-top: 50px;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -31,14 +56,14 @@
 
         .btn {
             display: inline-block;
-            margin: 15px;
-            padding: 20px;
-            width: 300px;
+            margin: 8px;
+            padding: 12px;
+            width: 250px;
             border: none;
             cursor: pointer;
-            border-radius: 10px;
+            border-radius: 12px;
             color: white;
-            font-size: 20px;
+            font-size: 18px;
             font-weight: 600;
             transition: all 0.3s ease-in-out;
             text-align: left;
@@ -50,9 +75,9 @@
         }
 
         .btn img {
-            width: 50px;
-            height: 50px;
-            margin-right: 15px;
+            width: 35px;
+            height: 35px;
+            margin-right: 12px;
             vertical-align: middle;
         }
 
@@ -96,8 +121,8 @@
         .star {
             position: absolute;
             background: white;
-            width: 2px;
-            height: 2px;
+            width: 3px;
+            height: 3px;
             border-radius: 50%;
             animation: moveStars 10s linear infinite;
         }
@@ -127,16 +152,12 @@
         .star:nth-child(13) { left: 75%; animation-duration: 19s; }
         .star:nth-child(14) { left: 85%; animation-duration: 12s; }
 
-        /* Contenedor de moderadores */
         .moderators-container {
-            position: absolute;
-            top: 50%;
-            right: 20px;
-            transform: translateY(-50%);
+            margin-top: 30px;
             background-color: rgba(255, 255, 255, 0.1);
-            padding: 20px;
-            border-radius: 10px;
-            width: 200px;
+            padding: 10px;
+            border-radius: 12px;
+            width: 220px;
             animation: float 5s ease-in-out infinite;
             transition: all 0.3s ease-in-out;
         }
@@ -146,9 +167,9 @@
         }
 
         .moderators-container h2 {
-            font-size: 22px;
-            font-family: 'Roboto', sans-serif;
-            margin-bottom: 15px;
+            font-size: 20px;
+            font-family: 'Comic Sans MS', cursive;
+            margin-bottom: 10px;
             color: white;
         }
 
@@ -159,14 +180,43 @@
         }
 
         .moderators-list li {
-            font-size: 18px;
-            margin: 10px 0;
+            font-size: 16px;
+            margin: 8px 0;
             display: flex;
             align-items: center;
+            animation: colorChange 3s infinite alternate;
+            font-family: 'Comic Sans MS', cursive;
+        }
+
+        @keyframes colorChange {
+            0% { color: white; }
+            25% { color: red; }
+            50% { color: yellow; }
+            75% { color: blue; }
+            100% { color: green; }
         }
 
         .moderators-list li span {
-            margin-right: 10px;
+            margin-right: 8px;
+        }
+
+        .moderators-list li::after {
+            content: ' ❤️ 🐱';
+            margin-left: 8px;
+        }
+
+        @media (max-width: 768px) {
+            .btn {
+                width: 90%;
+            }
+
+            .moderators-container {
+                width: 90%;
+            }
+
+            .steam-id {
+                left: 10px;
+            }
         }
     </style>
 </head>
@@ -174,51 +224,44 @@
 
     <h1>Bienvenidos amigos :3</h1>
 
-    <div class="buttons">
-        <a href="https://www.instagram.com/luispurorush/" target="_blank" class="btn btn-instagram">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram Icon">
-            <span>Sígueme en Instagram</span>
-        </a>
-        <a href="https://discord.gg/8SdHh6JdcS" target="_blank" class="btn btn-discord">
-            <img src="discord.jpg" alt="Discord Icon">
-            <span>Sígueme en Discord</span>
-        </a>
-        <a href="https://kick.com/luispurorush" target="_blank" class="btn btn-kick">
-            <img src="kick.jpg" alt="Kick Icon">
-            <span>Sígueme en Kick</span>
-        </a>
-        <a href="https://www.youtube.com/@luispurorush8074" target="_blank" class="btn btn-youtube">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/YouTube_icon_%282013-2017%29.png" alt="YouTube Icon">
-            <span>Sígueme en YouTube</span>
-        </a>
+    <div class="buttons-container">
+        <div class="steam-id">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/8/83/Steam_icon_logo.svg" alt="Steam Icon">
+            <span>ID: 1477300351</span>
+        </div>
+        <div class="buttons">
+            <a href="https://www.instagram.com/luispurorush/" target="_blank" class="btn btn-instagram">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram Icon">
+                <span>Sígueme en Instagram</span>
+            </a>
+            <a href="https://discord.gg/8SdHh6JdcS" target="_blank" class="btn btn-discord">
+                <img src="discord.jpg" alt="Discord Icon">
+                <span>Únete a mi servidor</span>
+            </a>
+            <a href="https://kick.com/luispurorush" target="_blank" class="btn btn-kick">
+                <img src="kick.jpg" alt="Kick Icon">
+                <span>Sígueme en Kick</span>
+            </a>
+            <a href="https://www.youtube.com/@luispurorush8074" target="_blank" class="btn btn-youtube">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/YouTube_icon_%282013-2017%29.png" alt="YouTube Icon">
+                <span>Sígueme en YouTube</span>
+            </a>
+
+            <div class="moderators-container">
+                <h2>Moderadores</h2>
+                <ul class="moderators-list">
+                    <li><span>👑</span>Valesita</li>
+                    <li><span>👑</span>Andreita</li>
+                    <li><span>👑</span>Lucianita</li>
+                    <li><span>👑</span>Tobias</li>
+                    <li><span>👑</span>Fabrichio</li>
+                </ul>
+            </div>
+        </div>
     </div>
 
     <div class="stars">
-        <div class="star" style="left: 10%; animation-duration: 15s;"></div>
-        <div class="star" style="left: 20%; animation-duration: 12s;"></div>
-        <div class="star" style="left: 30%; animation-duration: 10s;"></div>
-        <div class="star" style="left: 40%; animation-duration: 14s;"></div>
-        <div class="star" style="left: 50%; animation-duration: 12s;"></div>
-        <div class="star" style="left: 60%; animation-duration: 16s;"></div>
-        <div class="star" style="left: 70%; animation-duration: 18s;"></div>
-        <div class="star" style="left: 80%; animation-duration: 10s;"></div>
-        <div class="star" style="left: 90%; animation-duration: 14s;"></div>
-        <div class="star" style="left: 25%; animation-duration: 13s;"></div>
-        <div class="star" style="left: 55%; animation-duration: 17s;"></div>
-        <div class="star" style="left: 75%; animation-duration: 19s;"></div>
-        <div class="star" style="left: 85%; animation-duration: 12s;"></div>
-    </div>
+        <div class="star" style="left: 10%; animation-duration: 12s;"></div> <div class="star" style="left: 20%; animation-duration: 14s;"></div> <div class="star" style="left: 30%; animation-duration: 16s;"></div> <!-- Agrega más estrellas aquí --> </div>
 
-    <!-- Contenedor de moderadores -->
-    <div class="moderators-container">
-        <h2>Moderadores</h2>
-        <ul class="moderators-list">
-            <li><span>👑</span>Valesita</li>
-            <li><span>👑</span>Andreita</li>
-            <li><span>👑</span>Lucianita</li>
-            <li><span>👑</span>Tobias</li>
-        </ul>
-    </div>
-
-</body>
-</html>
+    </body> 
+    </html>
